@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Input Form</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #0d1117, #1f2937);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 50px;
+    }
+    form {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 30px;
+      border-radius: 15px;
+      width: 700px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #00aaff;
+    }
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0 15px 0;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+    }
+    input[type="file"] {
+      background: none;
+      color: #fff;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #00aaff;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #007acc;
+    }
+    .section-title {
+      margin-top: 20px;
+      font-size: 1.2em;
+      border-bottom: 2px solid #00aaff;
+      padding-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="portfolioForm">
+    <h2>Enter your portfolio details </h2>
+
+    <!-- Personal Details -->
+    <div class="section-title">Personal Details</div>
+    <label>Full Name:</label>
+    <input type="text" name="fullName" placeholder="John Doe" required>
+
+    <label>Title / Role:</label>
+    <input type="text" name="role" placeholder="Aspiring Full Stack Developer" required>
+
+    <label>Profile Image:</label>
+    <input type="file" name="profilePic" accept="image/*">
+
+    <label>Resume Link:</label>
+    <input type="url" name="resumeLink" placeholder="https://drive.google.com/your-resume-link">
+
+    <label>Email:</label>
+    <input type="email" name="email" placeholder="johndoe@example.com" required>
+
+    <label>Phone:</label>
+    <input type="text" name="phone" placeholder="9876543210" required>
+
+    <label>GitHub URL:</label>
+    <input type="url" name="github" placeholder="https://github.com/johndoe">
+
+    <label>Short Bio:</label>
+    <textarea name="bio" rows="4" placeholder="I'm a Computer Science student passionate about web development and technology." required></textarea>
+
+    <!-- Skills -->
+    <div class="section-title">Skills</div>
+    <label>Languages (comma separated):</label>
+    <input type="text" name="languages" placeholder="Java, Python, MySQL">
+
+    <label>Technologies (comma separated):</label>
+    <input type="text" name="technologies" placeholder="HTML, CSS, JavaScript, React, Node.js">
+
+    <label>Tools (comma separated):</label>
+    <input type="text" name="tools" placeholder="VS Code, GitHub, Postman">
+
+    <!-- Education -->
+    <div class="section-title">Education</div>
+    <label>College Name:</label>
+    <input type="text" name="college" placeholder="ABC College of Engineering and Technology">
+
+    <label>Degree:</label>
+    <input type="text" name="degree" placeholder="B.E Computer Science and Engineering">
+
+    <label>CGPA:</label>
+    <input type="text" name="cgpa" placeholder="8.5">
+
+    <label>HSC School Name & Percentage:</label>
+    <input type="text" name="hsc" placeholder="XYZ Hr. Sec. School (90%)">
+
+    <label>SSLC School Name & Percentage:</label>
+    <input type="text" name="sslc" placeholder="ABC Matriculation School (95%)">
+
+    <!-- Projects -->
+    <div class="section-title">Projects</div>
+
+    <label>Project 1 - Title:</label>
+    <input type="text" name="proj1Title" placeholder="Student Fee Management System">
+    <label>Project 1 - Description:</label>
+    <textarea name="proj1Desc" rows="2" placeholder="Developed a web app using PHP and MySQL to manage student fees."></textarea>
+
+    <label>Project 2 - Title:</label>
+    <input type="text" name="proj2Title" placeholder="Task Automation Tool">
+    <label>Project 2 - Description:</label>
+    <textarea name="proj2Desc" rows="2" placeholder="Automated repetitive tasks using RPA with UiPath."></textarea>
+
+    <label>Project 3 - Title:</label>
+    <input type="text" name="proj3Title" placeholder="IoT Smart Home System">
+    <label>Project 3 - Description:</label>
+    <textarea name="proj3Desc" rows="2" placeholder="Built an IoT-based smart home control system using sensors and NodeMCU."></textarea>
+
+    <!-- SEO Info -->
+    <div class="section-title">SEO Information</div>
+    <label>Meta Description:</label>
+    <textarea name="metaDescription" rows="3" placeholder="Portfolio of a full-stack developer showcasing skills, projects, and achievements."></textarea>
+
+    <label>Meta Keywords:</label>
+    <textarea name="metaKeywords" rows="2" placeholder="portfolio, developer, full-stack, web development, Java, React, MySQL"></textarea>
+
+    <button type="submit">Generate Portfolio</button>
+  </form>
+
+  <script>
+    document.getElementById('portfolioForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert("✅ Form submitted successfully! You can now generate the portfolio dynamically.");
+    });
+  </script>
+
+</body>
+</html>
